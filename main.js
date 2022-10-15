@@ -18,7 +18,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
   // Computer selects a random option through the computerPlay() function
-	var computerSelection = computerPlay();
+  var computerSelection = computerPlay();
 	// Player types in their choice through a text prompt
 	var playerSelection = prompt("Choose rock, paper or scissors!").toLowerCase();
 	// Choices are displayed in the console log
