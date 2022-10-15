@@ -1,9 +1,3 @@
-var playerSelection;
-var computerSelection;
-var playerScore;
-var computerScore;
-var outcome;
-
 function computerPlay() {
 	// A number between 0 and 2 (including) is chosen, and an option is selected based on the number
 	var rand = Math.floor(Math.random() * 3);
@@ -24,9 +18,9 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
 	// Computer selects a random option through the computerPlay() function
-	computerSelection = computerPlay();
+	var computerSelection = computerPlay();
 	// Player types in their choice through a text prompt
-	playerSelection = prompt("Choose rock, paper or scissors!").toLowerCase();
+	var playerSelection = prompt("Choose rock, paper or scissors!").toLowerCase();
 	// Choices are displayed in the console log
 	console.log(`You selected: ${playerSelection}`);
 	console.log(`Computer selected: ${computerSelection}`);
@@ -75,8 +69,9 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 	// Plays a game of 5 rounds of RPS, returns the outcome of the game
-	playerScore = 0;
-	computerScore = 0;
+  var outcome;
+	var playerScore = 0;
+	var computerScore = 0;
 	for (var i = 0; i < 5; i++) {
 		playRound(playerSelection, computerSelection);
 	}
